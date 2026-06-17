@@ -1,0 +1,31 @@
+# Git
+.git/
+.gitignore
+
+# Virtual environment (very large, not needed in container)
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Local database
+db.sqlite3
+*.sqlite3
+
+# Secrets
+.env
+.env.local
+
+# Fly.io config (not needed inside the running container)
+fly.toml
+
+# Generated static/media
+staticfiles/
+media/
+
+# Logs & OS files
+*.log
+.DS_Store
