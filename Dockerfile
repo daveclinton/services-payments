@@ -27,9 +27,6 @@ RUN /opt/venv/bin/pip install --upgrade pip && \
 # Copy the rest of the application
 COPY . .
 
-# Collect static files using explicit venv python
-RUN /opt/venv/bin/python manage.py collectstatic --noinput
-
 # Stage 2: Create the Final Production Image
 FROM python:3.12-slim
 
