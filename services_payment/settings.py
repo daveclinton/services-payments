@@ -27,9 +27,13 @@ SECRET_KEY = 'django-insecure-u895(9+@zw*rn3!@7gpndt%b2o(+*8&b$!1#@-(5k6a%aufgo_
 DEBUG = True
 
 APP_NAME = os.environ.get("FLY_APP_NAME")
-ALLOWED_HOSTS = [f"{APP_NAME}.fly.dev"]
-
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    f"{APP_NAME}.fly.dev" if APP_NAME else "localhost",
+    "*.daveclintonn.cc",
+    "daveclintonn.cc",
+    "localhost",
+    "127.0.0.1",
+]
 
 
 # Application definition
